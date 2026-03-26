@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700');
+body{
+  font-family: 'Nunito Sans', sans-serif;
+  word-wrap: break-word;
+  line-height: 1.6;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: bolder;
+}
+h2{
+    font-size: 3rem;
+}
+h3{
+    font-size: 2rem;
+}
+
+/* Projects page: spacing above each subsection header */
+.projects-page .past-affiliations h3{
+  padding-top: 1.8rem;
+  margin-bottom: 0.4rem;
+}
+a{
+    text-decoration: none;
+    color:#222222;
+}
+.navbar{
+    display: none;
+}
+.site-branding{
+    text-align: center;
+    padding: 2.4rem 1rem 1rem 1rem;
+}
+.site-title a,
+.site-title a:visited {
+    color: #222 !important;
+}
+.site-title a:hover,
+.site-title a:focus {
+    color: #888 !important;
+}
+.site-title h1 {
+    font-size: 4.0rem;
+    /* Reduce gap between site title and description text */
+    margin-bottom: 0.8rem;
+}
+
+.site-description p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Main page date-based news banner */
+.news-banner {
+  background: #e6e6e6;
+  color: #222;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.4rem 2.2rem;
+  margin-top: 0.8rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+/* Mobile navigation */
+.mobile-nav {
+  margin-top: 0.4rem;
+}
+.mobile-nav summary {
+  display: flex;
+  justify-content: flex-end;
+  cursor: pointer;
+  list-style: none;
+}
+.mobile-nav summary::-webkit-details-marker {
+  display: none;
+}
+.mobile-nav-icon {
+  display: inline-block;
+  width: 22px;
+  height: 2px;
+  background: #222;
+  position: relative;
+}
+.mobile-nav-icon::before,
+.mobile-nav-icon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: #222;
+}
+.mobile-nav-icon::before {
+  top: -6px;
+}
+.mobile-nav-icon::after {
+  top: 6px;
+}
+.mobile-nav-list {
+  list-style: none;
+  margin: 0.8rem 0 0;
+  padding: 0;
+  text-align: right;
+}
+.mobile-nav-link {
+  display: inline-block;
+  padding: 0.4rem 0;
+  color: #888;
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: .16rem;
+}
+.mobile-nav-link.active {
+  color: #000000;
+  background: transparent;
+}
+.mobile-nav-link.active:hover,
+.mobile-nav-link.active:focus {
+  color: #000000 !important;
+  background: transparent;
+}
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+  color: #000000;
+  background: transparent;
+}
+/* POST PREVIEW*/
+.post-header{
+    text-align: center;
+    padding:2rem;
+}
+.post-title{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.pre-article{
+    text-align: justify;
+    padding: 1rem;
+}
+.post-article{
+    text-align: justify;
+    padding: 1rem;
+}
+.post-excerpt{
+    padding:1rem;
+}
+.post-excerpt a{
+    text-decoration: underline;
+    font-size: 2rem;
+}
+.pager{
+    padding:3rem 1rem 2rem 1rem;
+}
+/*About*/
+.about-category{
+    padding:3rem 1rem 1rem 1rem;
+
+}
+.about{
+  text-align: center;   
+}
+.about-title{
+    font-size: 3rem;
+    font-weight: 700;
+}
+.about-social{
+    margin-top:2rem;
+}
+.about-social ul{
+    list-style: none;
+}
+.about-social ul li{
+     display: inline;
+     padding:0rem 2rem;
+}
+.copyright{
+    text-align: center;
+    padding:0rem 2rem 3rem 2rem;
+    margin-top: 1rem;
+    color:#bfbfbf;
+
+}
+/*CONTACT PAGE*/
+.contact{
+  padding:1rem;
+}
+.contact-title{
+    text-align: center;
+}
+/* Larger than phone */
+@media (min-width: 550px) {
+.post-title{
+    font-size: 4rem;
+    font-weight: 700;
+}
+}
+
+/* Larger than tablet */
+@media (min-width: 750px) {
+  .mobile-nav {
+    display: none;
+  }
+  /* Navbar */
+  .navbar + .docs-section {
+    border-top-width: 0; }
+  .navbar,
+  .navbar-spacer {
+    display: block;
+    width: 100%;
+    height: 6.5rem;
+    background: #808d6d;
+    z-index: 99;
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.35); }
+  .navbar-spacer {
+    display: none; }
+  .navbar > .container {
+    width: 100%; }
+  .navbar-list {
+    list-style: none;
+    margin-bottom: 0; }
+  .navbar-item {
+    position: relative;
+    float: none;
+    margin-bottom: 0; }
+  .navbar-list {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-left: 0; }
+  .navbar-item:last-child .navbar-link {
+    margin-right: 0; }
+  .navbar-link {
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .16rem;
+    margin-right: 35px;
+    text-decoration: none;
+    line-height: 6.5rem;
+    color: #f5f5f5; }
+  .navbar-link.active {
+    color: #000000;
+    background: transparent; }
+  .navbar-link:hover,
+  .navbar-link:focus {
+    color: #000000 !important;
+  }
+  .navbar-link.active:hover,
+  .navbar-link.active:focus {
+    color: #000000 !important;
+  }
+
+}
+
+/* Output page: collapsible sections */
+.output-section {
+  margin-bottom: 1.5rem;
+}
+.output-section summary {
+  padding: 0.5rem 0;
+  list-style: none;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+.output-section summary::-webkit-details-marker {
+  display: none;
+}
+.output-section summary::before {
+  content: "";
+}
+.output-section summary h2 {
+  display: inline;
+  margin: 0;
+  font-size: 3.5rem;
+  cursor: pointer;
+}
+.output-section:not([open]) summary h2 {
+  color: #888;
+}
+.output-section[open] summary h2 {
+  color: #222;
+}
+.output-section[open] summary h2:hover {
+  color: #888;
+}
+.output-section:not([open]) summary h2:hover {
+  color: #222;
+}
+.output-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+.output-section li {
+  position: relative;
+  padding-left: 2.5em;
+  text-indent: -0.8em;
+  margin-bottom: 0.9rem;
+}
+.output-section li::before {
+  content: "- ";
+  position: absolute;
+  left: 1.5em;
+}
+
+/* Add breathing room below the site header on each page */
+.container .row .twelve.columns > h1:first-child {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Output page spacing below nav */
+.output-page .twelve.columns {
+  padding-top: 1.5rem;
+}
+
+/* Main page profile image (right column) */
+.main-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 0;
+}
+.main-intro-text {
+  flex: 2;
+}
+.main-intro-image {
+  flex: 1;
+}
+
+/* Slight horizontal nudge for homepage intro text */
+@media (min-width: 750px) {
+  .main-intro-text {
+    margin-left: 1rem;
+  }
+}
+.main-profile-photo {
+  display: block;
+  margin-left: auto;
+  border-radius: 0;
+}

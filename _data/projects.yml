@@ -1,0 +1,24 @@
+# Projects list. Add items with keys such as: title, description, url, role
+
+- title: Mandarin Classifier Optimality
+  description: Emphasize, optimal encoding and exploration of semantic space. Are allomorphy classes organized around any communication principles? 
+  image: "images/projects/Projects-Classifier_Optimality.png"
+
+- title: Sublexical Phonotactics affect processing
+  description: Pophristic (Submitted) shows xyz. Exploring this with a full set of phonotactic variables. Using MEG. 
+  image: "images/projects/Projects-Classifier_Optimality.png"
+
+- title: Turkish Morph Project
+  description: Vowel Harmony. Exploring questions in the Sublexical Phonotactics and QP1 projects. 
+  image: "images/projects/Projects-Classifier_Optimality.png"
+
+- title: Morphological Relationships in Processing
+  description: "Which relationships are tracked during processing. My first qualifier (in prep) compared two prominent theories: distributed morphology and word and paradigm morphology. Which TP seems to matter most."
+  image: "images/projects/Projects-Classifier_Optimality.png"
+
+
+# Example:
+# - title: "Project Name"
+#   description: "Short description of the project."
+#   url: "https://..."
+#   role: "Lead developer"

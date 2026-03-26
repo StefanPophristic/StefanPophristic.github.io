@@ -1,0 +1,35 @@
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="site-branding">
+          <div class="site-title">
+            <a href="{{ site.baseurl }}/"><h1>{{ site.title }}</h1></a>
+          </div>
+          <div class="site-description">
+            <p>{{ site.site-description }}</p>
+          </div>
+        </div>
+        <details class="mobile-nav">
+          <summary aria-label="Toggle navigation menu">
+            <span class="mobile-nav-icon"></span>
+          </summary>
+          <ul class="mobile-nav-list">
+            <li><a class="mobile-nav-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ site.baseurl }}/">Main</a></li>
+            <li><a class="mobile-nav-link{% if page.url == '/research.html' %} active{% endif %}" href="{{ site.baseurl }}/research.html">Research</a></li>
+            <li><a class="mobile-nav-link{% if page.url == '/output.html' %} active{% endif %}" href="{{ site.baseurl }}/output.html">Output</a></li>
+          </ul>
+        </details>
+        <nav class="navbar">
+          <div class="container">
+            <ul class="navbar-list">
+              <li class="navbar-item"><a class="navbar-link{% if page.url == '/' or page.url == '/index.html' %} active{% endif %}" href="{{ site.baseurl }}/">Main</a></li>
+              <li class="navbar-item"><a class="navbar-link{% if page.url == '/research.html' %} active{% endif %}" href="{{ site.baseurl }}/research.html">Research</a></li>
+              <li class="navbar-item"><a class="navbar-link{% if page.url == '/output.html' %} active{% endif %}" href="{{ site.baseurl }}/output.html">Output</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>

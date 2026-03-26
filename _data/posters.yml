@@ -1,0 +1,44 @@
+# Poster presentations list. Add items with keys such as: title, event, location, date, poster_pdf
+
+- title: Inflectional class phonotactics affect lexical access
+  authors: Stefan Pophristic
+  event: Human Sentence Processing (HSP)
+  location: MIT Boston, USA
+  date: "2026"
+  poster_pdf:
+
+- title: Incremental versus Global visual word recognition in the M170
+  authors: Stefan Pophristic, Alec Marantz
+  event: Society for Neurobiology of Language (SNL)
+  location: Washington D.C., USA
+  date: "2025"
+  poster_pdf:
+
+- title: Predictive Morphological Processing of Visual Words
+  authors: Stefan Pophristic, Alec Marantz
+  event: Human Sentence Processing (HSP)
+  location: College Park, Maryland, USA
+  date: "2025"
+  poster_pdf:
+
+
+- title: Evidence for Transition Probability in Processing of Spanish Verbs
+  authors: Stefan Pophristic, Alec Marantz
+  event: Architectures and Mechanisms for Language Processing (AMLAP)
+  location: Edinburgh, Scotland
+  date: "2024"
+  poster_pdf:
+
+- title: Pragmatic use of morphological information in Serbo-Croatian redundant referring expression production
+  authors: Stefan Pophristic, Brandon Waldon, Judith Degen
+  event: 9th Experimental Pragmatics (XPrag) Conference
+  location: Pavia, Italy
+  date: "2022"
+  poster_pdf:
+
+- title: The role of gender in the acquisition of the Serbian case system
+  authors: Stefan Pophristic, Kathryn Schuler
+  event: LSA Annual Meeting
+  location: virtual
+  date: "2021"
+

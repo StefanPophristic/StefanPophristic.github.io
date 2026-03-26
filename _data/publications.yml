@@ -1,0 +1,31 @@
+# Publications list. Keys: title, authors, journal, year, volume, issue, pages, url, pdf, doi
+
+# Example:
+# - title: "My Paper"
+#   authors: "Jane Doe, John Smith"
+#   journal: "Journal or Conference Name"
+#   year: 2024
+#   volume: 6
+#   issue: 1
+#   pages: "896-905"
+#   url: "https://..."
+#   pdf: "https://..."
+#   doi: "10.1234/..."
+
+
+- title: The role of production expectations in visual world paradigm linking hypotheses
+  authors: Judith Degen, Stefan Pophristic
+  year: 2022
+  journal: Proceedings of the 44th Annual Conference of the Cognitive Science Society 
+  volume: 44
+  issue: 1
+  pages: 
+
+
+- title: The role of gender in the acquisition of the Serbian case system
+  authors: Stefan Pophristic, Kathryn Schuler
+  year: 2021
+  journal: Proceedings of the Linguistic Society fo America 
+  volume: 6
+  issue: 1
+  pages: 896-905

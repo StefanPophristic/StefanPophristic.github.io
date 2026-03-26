@@ -1,0 +1,73 @@
+---
+layout: page
+title: Output
+---
+
+<div class="container output-page">
+  <div class="row">
+    <div class="twelve columns">
+
+      <details class="output-section" open>
+        <summary><h2>Publications</h2></summary>
+      {% if site.data.publications and site.data.publications.size > 0 %}
+        {% assign publications = site.data.publications | sort: "year" | reverse %}
+        <ul>
+        {% for item in publications %}
+          <li>
+            {% assign author_list = item.authors | default: "" | split: "," %}
+            {% if item.year %}({{ item.year }}) {% endif %}{% if item.authors %}{% if author_list.size > 2 %}{{ author_list[0] | strip }} et al.{% else %}{{ item.authors | strip }}{% endif %}. {% endif %}<strong>{{ item.title }}</strong>.
+            {% assign conference_name = item.conference | default: item.event %}
+            {% if conference_name %}
+              <em>{{ conference_name }}</em>{% if item.location %} ({{ item.location }}){% endif %}.
+            {% elsif item.journal %}
+              <em>{{ item.journal }}</em>.
+              {% if item.volume or item.issue or item.pages %}
+                {% if item.volume %} {{ item.volume }}{% endif %}{% if item.issue %}({{ item.issue }}){% endif %}{% if item.pages %}: {{ item.pages }}{% endif %}.
+              {% endif %}
+            {% endif %}
+          </li>
+        {% endfor %}
+        </ul>
+      {% else %}
+        <p><em>Publications will be listed here. Add entries to <code>_data/publications.yml</code>.</em></p>
+      {% endif %}
+      </details>
+
+      <details class="output-section" open>
+        <summary><h2>Talks</h2></summary>
+      {% if site.data.talks and site.data.talks.size > 0 %}
+        {% assign talks = site.data.talks | sort: "date" | reverse %}
+        <ul>
+        {% for item in talks %}
+          <li>
+            {% assign author_list = item.authors | default: "" | split: "," %}
+            {% if item.date %}({{ item.date | append: "" | slice: 0, 4 }}) {% endif %}{% if item.authors %}{% if author_list.size > 2 %}{{ author_list[0] | strip }} et al.{% else %}{{ item.authors | strip }}{% endif %}. {% endif %}<strong>{{ item.title }}</strong>.
+            {% if item.event %}<em>{{ item.event }}</em>{% if item.location %} ({{ item.location }}){% endif %}.{% endif %}
+          </li>
+        {% endfor %}
+        </ul>
+      {% else %}
+        <p><em>Talks will be listed here. Add entries to <code>_data/talks.yml</code>.</em></p>
+      {% endif %}
+      </details>
+
+      <details class="output-section" open>
+        <summary><h2>Posters</h2></summary>
+      {% if site.data.posters and site.data.posters.size > 0 %}
+        {% assign posters = site.data.posters | sort: "date" | reverse %}
+        <ul>
+        {% for item in posters %}
+          <li>
+            {% assign author_list = item.authors | default: "" | split: "," %}
+            {% if item.date %}({{ item.date | append: "" | slice: 0, 4 }}) {% endif %}{% if item.authors %}{% if author_list.size > 2 %}{{ author_list[0] | strip }} et al.{% else %}{{ item.authors | strip }}{% endif %}. {% endif %}<strong>{{ item.title }}</strong>.
+            {% if item.event %}<em>{{ item.event }}</em>{% if item.location %} ({{ item.location }}){% endif %}.{% endif %}
+          </li>
+        {% endfor %}
+        </ul>
+      {% else %}
+        <p><em>Poster presentations will be listed here. Add entries to <code>_data/posters.yml</code>.</em></p>
+      {% endif %}
+      </details>
+    </div>
+  </div>
+</div>

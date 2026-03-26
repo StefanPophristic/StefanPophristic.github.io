@@ -1,0 +1,26 @@
+# Personal site — Handsomely theme (light only)
+# https://github.com/deeneshchowdhary/Handsomely-Jekyll
+
+title: Stefan Pophristic
+site-description: Academic Website
+email: pophristic@nyu.edu
+description: "A short description about you and your work."
+baseurl: ""
+url: ""
+email_username: pophristic@nyu.edu
+twitter_username:
+github_username:
+facebook_username:
+your_name: Stefan Pophristic
+about_yourself: "Researcher and developer. This is placeholder text — replace with your own bio in _config.yml. Duis interdum tincidunt risus. Integer a pellentesque nulla, ut tempus nunc. Mauris sed tortor vitae leo ullamcorper suscipit."
+
+markdown: kramdown
+paginate: 5
+gems:
+  - jekyll-paginate
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - projects.html

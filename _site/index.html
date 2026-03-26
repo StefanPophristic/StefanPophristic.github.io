@@ -1,0 +1,119 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A short description about you and your work.">
+  <title>Stefan Pophristic</title>
+  <link rel="stylesheet" href="/assets/css/normalize.css">
+  <link rel="stylesheet" href="/assets/css/skeleton.css">
+  <link rel="stylesheet" href="/assets/css/custom.css">
+</head>
+
+<header>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="site-branding">
+          <div class="site-title">
+            <a href="/"><h1>Stefan Pophristic</h1></a>
+          </div>
+          <div class="site-description">
+            <p>Academic Website</p>
+          </div>
+        </div>
+        <details class="mobile-nav">
+          <summary aria-label="Toggle navigation menu">
+            <span class="mobile-nav-icon"></span>
+          </summary>
+          <ul class="mobile-nav-list">
+            <li><a class="mobile-nav-link active" href="/">Main</a></li>
+            <li><a class="mobile-nav-link" href="/research.html">Research</a></li>
+            <li><a class="mobile-nav-link" href="/output.html">Output</a></li>
+          </ul>
+        </details>
+        <nav class="navbar">
+          <div class="container">
+            <ul class="navbar-list">
+              <li class="navbar-item"><a class="navbar-link active" href="/">Main</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="/research.html">Research</a></li>
+              <li class="navbar-item"><a class="navbar-link" href="/output.html">Output</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="container main-page">
+  <div class="row">
+    <div class="twelve columns">
+      <div id="news-banner" class="news-banner" style="display:none;"></div>
+      <div class="main-intro">
+        <div class="main-intro-text">
+          <p>
+            I am currently a fourth year linguistics PhD student at New York University, advised by Alec Marantz. I use behavioral and neuroscientific methods to ask questions about how morphologically complex words are processed in real time.
+          </p>
+        </div>
+        <div class="main-intro-image">
+          <img src="/assets/images/profile.jpg" alt="Profile photo" class="main-profile-photo u-max-full-width"/>
+          <!-- <p> BCS: ˈstefan popˈxristit͡ɕ</p>
+          <p> (American) English: ˈstɛfɪn pɑpˈhrɪstɪt͡ʃ</p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var newsItems = false;
+    if (!Array.isArray(newsItems) || newsItems.length === 0) return;
+
+    var today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    function parseDate(value) {
+      if (!value) return null;
+      var d = new Date(value + "T00:00:00");
+      return isNaN(d.getTime()) ? null : d;
+    }
+
+    var activeItems = newsItems.filter(function (item) {
+      var start = parseDate(item.Start_date);
+      var end = parseDate(item.End_date);
+      if (!start || !end) return false;
+      return today >= start && today <= end;
+    });
+
+    if (activeItems.length === 0) return;
+
+    activeItems.sort(function (a, b) {
+      return parseDate(b.Start_date) - parseDate(a.Start_date);
+    });
+
+    var banner = document.getElementById("news-banner");
+    if (!banner) return;
+    banner.style.display = "none";
+    banner.innerHTML = activeItems[0].Comment || "";
+    if (banner.textContent.trim() !== "") {
+      banner.style.display = "flex";
+    }
+  })();
+</script>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="twelve columns">
+        <div class="copyright">
+          Stefan Pophristic &mdash; PhD Student, Department of Linguistics, New York University
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<!-- END FOOTER -->
+
