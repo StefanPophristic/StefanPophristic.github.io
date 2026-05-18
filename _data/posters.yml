@@ -1,13 +1,16 @@
 # Poster presentations list. Add items with keys such as: title, event, location, date, poster_pdf
 
 - title: Inflectional class phonotactics affect lexical access
+  project_tag:
   authors: Stefan Pophristic
   event: Human Sentence Processing (HSP)
   location: MIT Boston, USA
   date: "2026"
   poster_pdf:
 
+
 - title: Incremental versus Global visual word recognition in the M170
+  project_tag: 2023_Spanish_Verbs
   authors: Stefan Pophristic, Alec Marantz
   event: Society for Neurobiology of Language (SNL)
   location: Washington D.C., USA
@@ -15,6 +18,7 @@
   poster_pdf:
 
 - title: Predictive Morphological Processing of Visual Words
+  project_tag: 2023_Spanish_Verbs
   authors: Stefan Pophristic, Alec Marantz
   event: Human Sentence Processing (HSP)
   location: College Park, Maryland, USA
@@ -23,6 +27,7 @@
 
 
 - title: Evidence for Transition Probability in Processing of Spanish Verbs
+  project_tag: 2023_Spanish_Verbs
   authors: Stefan Pophristic, Alec Marantz
   event: Architectures and Mechanisms for Language Processing (AMLAP)
   location: Edinburgh, Scotland

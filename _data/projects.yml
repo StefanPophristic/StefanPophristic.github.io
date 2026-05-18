@@ -1,4 +1,6 @@
-# Projects list. Add items with keys such as: title, description, url, role
+# Projects list. Keys: title, description, image, url, role, project_tag
+# If project_tag is set, the Projects page shows an "Output" button listing
+# publications/talks/posters with the same project_tag (see _data/*.yml).
 
 - title: Mandarin Classifier Optimality
   description: Emphasize, optimal encoding and exploration of semantic space. Are allomorphy classes organized around any communication principles? 
@@ -13,8 +15,9 @@
   image: "images/projects/Projects-Classifier_Optimality.png"
 
 - title: Morphological Relationships in Processing
-  description: "Which relationships are tracked during processing. My first qualifier (in prep) compared two prominent theories: distributed morphology and word and paradigm morphology. Which TP seems to matter most."
-  image: "images/projects/Projects-Classifier_Optimality.png"
+  project_tag: 2023_Spanish_Verbs
+  description: "There is a long running debate in both the theoretical and experimental literature as to what the best way to model knowledge of highly inflectional systems. For example, when processing the word <i>bailabas</i>, a Spanish speaker must identify that the word consists of at least three parts, each contributing their own grammatical properties and meaning: <i>bail</i> ('to dance'), <i>aba</i> (past tense), <i>s</i> (second person singular subject). In this project I contrast two opposing models using both an online behavioral task and with simulatenous Magnetoencapholography recording: the local morphemic model and the global paradigmatic model. Both models rely on similar intuitions to explain processing effects: in order to process a complex word like <i>bailabas</i>, the processing system must extract relevant properties from the whole word form. However, the two models differ in what they posit as the fundamental relationship that underpins the processing of these complex words: local morphemic relationships or global paradigmatic relationships."
+  image: "images/projects/Projects-2023_Spanish_Verbs.png"
 
 
 # Example:

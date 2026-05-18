@@ -20,6 +20,57 @@ h3{
   padding-top: 1.8rem;
   margin-bottom: 0.4rem;
 }
+
+/* Projects page: image left of body text under each project title */
+.projects-page .project-item {
+  margin-bottom: 2rem;
+}
+.projects-page .project-item h3 {
+  margin-bottom: 0.8rem;
+}
+.projects-page .project-body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+}
+.projects-page .project-image {
+  flex: 0 0 auto;
+  width: 260px;
+  max-width: 42%;
+}
+.projects-page .project-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.projects-page .project-text {
+  flex: 1;
+  min-width: 0;
+}
+.projects-page .project-text p:first-child {
+  margin-top: 0;
+}
+@media (max-width: 749px) {
+  .projects-page .project-body {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .projects-page .project-image {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+
+.projects-page .project-output-toggle {
+  margin-top: 1rem;
+}
+.projects-page .project-output-panel {
+  margin-top: 1rem;
+}
+.projects-page .project-output-empty {
+  margin: 0;
+}
 a{
     text-decoration: none;
     color:#222222;
@@ -293,17 +344,20 @@ a{
 .output-section:not([open]) summary h2:hover {
   color: #222;
 }
-.output-section ul {
+.output-section ul,
+.project-output-panel ul {
   list-style: none;
   padding-left: 0;
 }
-.output-section li {
+.output-section li,
+.project-output-panel li {
   position: relative;
   padding-left: 2.5em;
   text-indent: -0.8em;
   margin-bottom: 0.9rem;
 }
-.output-section li::before {
+.output-section li::before,
+.project-output-panel li::before {
   content: "- ";
   position: absolute;
   left: 1.5em;

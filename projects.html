@@ -7,23 +7,40 @@ title: Projects
   <div class="row">
     <div class="twelve columns">
 
+      I am currently working on several related projects that are feeding into my dissertation work in different ways. 
+
       I am currently working on several related projects including information theoretic work on the Mandarin Classifier system, a neuro-imaging study on Turkish vowel harmony, and a neuro-imaging study on statistical generalizations over Spanish inflectional classes. This site is currently under construction, please come back for more details in a few weeks! 
-<!-- 
-      Here are few current and past projects. 
+
 
       {% assign projects = site.data.projects | default: "" %}
       {% if projects.size > 0 %}
         {% for project in projects %}
-        <div class="project-item" style="margin-bottom: 2rem;">
+        <div class="project-item">
           <h3>{{ project.title }}</h3>
-          {% if project.description %}<p>{{ project.description }}</p>{% endif %}
-          {% if project.role %}<p><em>Role: {{ project.role }}</em></p>{% endif %}
-          {% if project.url %}<p><a href="{{ project.url }}">Link</a></p>{% endif %}
+          <div class="project-body">
+            {% if project.image %}
+            <div class="project-image">
+              <img src="{{ site.baseurl }}/assets/{{ project.image }}" alt="" class="u-max-full-width"/>
+            </div>
+            {% endif %}
+            <div class="project-text">
+              {% if project.description %}<p>{{ project.description }}</p>{% endif %}
+              {% if project.role %}<p><em>Role: {{ project.role }}</em></p>{% endif %}
+              {% if project.url %}<p><a href="{{ project.url }}">Link</a></p>{% endif %}
+            </div>
+          </div>
+          {% if project.project_tag %}
+          {% assign output_panel_id = 'project-output-' | append: forloop.index %}
+          <button type="button" class="button project-output-toggle" aria-expanded="false" aria-controls="{{ output_panel_id }}">Output</button>
+          <div id="{{ output_panel_id }}" class="project-output-panel" hidden>
+            {% include output-items-by-tag.html tag=project.project_tag %}
+          </div>
+          {% endif %}
         </div>
         {% endfor %}
       {% else %}
         <p><em>No projects yet. Add entries to <code>_data/projects.yml</code> to list them here.</em></p>
-      {% endif %} -->
+      {% endif %}
 
       <h2>Past Affiliations</h2>
       <div class="past-affiliations">
@@ -41,3 +58,19 @@ title: Projects
     </div>
   </div>
 </div>
+
+<script>
+  (function () {
+    document.querySelectorAll('.projects-page .project-output-toggle').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var panelId = btn.getAttribute('aria-controls');
+        if (!panelId) return;
+        var panel = document.getElementById(panelId);
+        if (!panel) return;
+        var isOpen = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+        panel.hidden = isOpen;
+      });
+    });
+  })();
+</script>

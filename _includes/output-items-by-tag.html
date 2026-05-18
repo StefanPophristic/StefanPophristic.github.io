@@ -1,0 +1,71 @@
+{% assign tag = include.tag | strip %}
+
+{% assign match_total = 0 %}
+{% if site.data.publications %}
+  {% for item in site.data.publications %}
+    {% if item.project_tag == tag %}{% assign match_total = match_total | plus: 1 %}{% endif %}
+  {% endfor %}
+{% endif %}
+{% if site.data.talks %}
+  {% for item in site.data.talks %}
+    {% if item.project_tag == tag %}{% assign match_total = match_total | plus: 1 %}{% endif %}
+  {% endfor %}
+{% endif %}
+{% if site.data.posters %}
+  {% for item in site.data.posters %}
+    {% if item.project_tag == tag %}{% assign match_total = match_total | plus: 1 %}{% endif %}
+  {% endfor %}
+{% endif %}
+
+{% if match_total == 0 %}
+  <p class="project-output-empty"><em>No linked output for this tag yet.</em></p>
+{% else %}
+  <ul>
+    {% if site.data.publications and site.data.publications.size > 0 %}
+    {% assign publications = site.data.publications | sort: "year" | reverse %}
+    {% for item in publications %}
+      {% if item.project_tag == tag %}
+      <li>
+        {% assign author_list = item.authors | default: "" | split: "," %}
+        {% if item.year %}({{ item.year }}) {% endif %}{% if item.authors %}{% if author_list.size > 2 %}{{ author_list[0] | strip }} et al.{% else %}{{ item.authors | strip }}{% endif %}. {% endif %}<strong>{{ item.title }}</strong>.
+        {% assign conference_name = item.conference | default: item.event %}
+        {% if conference_name %}
+          <em>{{ conference_name }}</em>{% if item.location %} ({{ item.location }}){% endif %}.
+        {% elsif item.journal %}
+          <em>{{ item.journal }}</em>.
+          {% if item.volume or item.issue or item.pages %}
+            {% if item.volume %} {{ item.volume }}{% endif %}{% if item.issue %}({{ item.issue }}){% endif %}{% if item.pages %}: {{ item.pages }}{% endif %}.
+          {% endif %}
+        {% endif %}
+      </li>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if site.data.talks and site.data.talks.size > 0 %}
+    {% assign talks = site.data.talks | sort: "date" | reverse %}
+    {% for item in talks %}
+      {% if item.project_tag == tag %}
+      <li>
+        {% assign author_list = item.authors | default: "" | split: "," %}
+        {% if item.date %}({{ item.date | append: "" | slice: 0, 4 }}) {% endif %}{% if item.authors %}{% if author_list.size > 2 %}{{ author_list[0] | strip }} et al.{% else %}{{ item.authors | strip }}{% endif %}. {% endif %}<strong>{{ item.title }}</strong>.
+        {% if item.event %}<em>{{ item.event }}</em>{% if item.location %} ({{ item.location }}){% endif %}.{% endif %}
+      </li>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% if site.data.posters and site.data.posters.size > 0 %}
+    {% assign posters = site.data.posters | sort: "date" | reverse %}
+    {% for item in posters %}
+      {% if item.project_tag == tag %}
+      <li>
+        {% assign author_list = item.authors | default: "" | split: "," %}
+        {% if item.date %}({{ item.date | append: "" | slice: 0, 4 }}) {% endif %}{% if item.authors %}{% if author_list.size > 2 %}{{ author_list[0] | strip }} et al.{% else %}{{ item.authors | strip }}{% endif %}. {% endif %}<strong>{{ item.title }}</strong>.
+        {% if item.event %}<em>{{ item.event }}</em>{% if item.location %} ({{ item.location }}){% endif %}.{% endif %}
+      </li>
+      {% endif %}
+    {% endfor %}
+    {% endif %}
+  </ul>
+{% endif %}
